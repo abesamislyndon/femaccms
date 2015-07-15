@@ -237,7 +237,7 @@ class WC_Frontend_Scripts {
 			case 'wc-add-to-cart' :
 				return array(
 					'ajax_url'                => WC()->ajax_url(),
-					'i18n_view_cart'          => esc_attr__( 'View Cart', 'woocommerce' ),
+					'i18n_view_cart'          => esc_attr__( 'View', 'woocommerce' ),
 					'cart_url'                => wc_get_page_permalink( 'cart' ),
 					'is_cart'                 => is_cart(),
 					'cart_redirect_after_add' => get_option( 'woocommerce_cart_redirect_after_add' )

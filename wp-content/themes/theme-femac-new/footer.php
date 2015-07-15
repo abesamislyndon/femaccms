@@ -1,4 +1,5 @@
-	<footer>
+
+  <footer>
 		<div class="row no-gutters">
          <div class="col-md-12 footer">
             <div class="col-md-4">
@@ -31,7 +32,8 @@
       });
     });
   </script>
- <?php wp_footer(); ?>
+
   <script src="<?php echo bloginfo('template_url');?>/js/script.js"></script>
 </body>
+ <?php wp_footer(); ?>
 </html>

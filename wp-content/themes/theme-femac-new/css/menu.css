@@ -41,31 +41,27 @@
   -o-transition: all 0.25s ease-in;
   transition: all 0.25s ease-in;
   position: relative;
-  background: rgb(48,42,176); /* Old browsers */
-  background: -moz-linear-gradient(-45deg,  rgba(48,42,176,1) 2%, rgba(55,104,196,1) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(2%,rgba(48,42,176,1)), color-stop(100%,rgba(55,104,196,1))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(-45deg,  rgba(48,42,176,1) 2%,rgba(55,104,196,1) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(-45deg,  rgba(48,42,176,1) 2%,rgba(55,104,196,1) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(-45deg,  rgba(48,42,176,1) 2%,rgba(55,104,196,1) 100%); /* IE10+ */
-  background: linear-gradient(135deg,  rgba(48,42,176,1) 2%,rgba(55,104,196,1) 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#302ab0', endColorstr='#3768c4',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
+  background:#555555; 
 }
+
 #cssmenu > ul > li:first-child > a {
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 }
+
 #cssmenu > ul > li:last-child > a {
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
   border-bottom: 1px solid #000000;
 }
+
 #cssmenu > ul > li:hover > a,
 #cssmenu > ul > li.open > a,
 #cssmenu > ul > li.active > a {
   background: #151515;
   color: #ffffff;
 }
+
 #cssmenu ul > li.has-sub > a::after {
   content: "";
   position: absolute;
@@ -87,6 +83,7 @@
   -o-transition: all .2s ease;
   transition: all .2s ease;m
 }
+
 #cssmenu ul > li.has-sub > a::before {
   content: "";
   position: absolute;
