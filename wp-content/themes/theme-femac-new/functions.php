@@ -65,7 +65,7 @@
     // enable to limit excerpt and force to add read more links in post
     function new_excerpt_more( $more ) 
     {
-    return '</br></br><a class="read-more" href="'. get_permalink( get_the_ID() ) . '">Read More</a>';
+    return '</br></br><a class="read-more" href="'. get_permalink( get_the_ID() ) . '">→  Read More</a>';
     }
     add_filter( 'excerpt_more', 'new_excerpt_more' );
     function get_cat_slug($cat_id) 

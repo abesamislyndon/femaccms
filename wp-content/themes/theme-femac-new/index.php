@@ -8,13 +8,13 @@
               <img src="<?php echo bloginfo('template_url'); ?>/img/banner.png" alt="">
             </div>
             <div class="col-md-6">
-                <div class="col-md-12">
+                <div class="">
                   <div class="call-us">
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis quos pariatur ipsa velit animi alias, nemo ea provident cumque molestias, voluptatum, voluptatibus porro neque eveniet odio ullam voluptas accusantium beatae!</p>
                   </div><!--end of lend of call us-->
                 </div>
 
-                <div class="col-md-12">
+                <div class="">
                   <div class="who-we">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas accusamus repellat aliquid veritatis suscipit sed alias quaerat eveniet, enim magni accusantium itaque vel quibusdam placeat mollitia, quod, ratione molestiae facere.
                    </div> 
@@ -49,22 +49,66 @@
         </div>
     </div>
 
-    <div class="row no-gutters">
-      <hr>
+  <div class="row no-gutters top" >
         <div class="col-md-4">
-            <div class="contact">
+            <div class="contact" id="googlemaps">
+                    <h4>CONTACT US</h4>
+                  <p> Femac Singapore Pte. Ltd</br>
+                      12 Tagore Lane</br>
+                      Singapore 787474</br>
+                      Tel: +65 6454 7277</br>
+                      Fax: +65 6458 7701</br>
+                      Email: info@femac.com.sg</p>
+
             </div><!--end of contact-->
         </div>
 
         <div class="col-md-8">
-            <div class="col-md-12">
+            <div class="">
                 <div class="latest-blog">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed alias tempora et asperiores laudantium ipsa, expedita ab suscipit qui eligendi numquam maxime ipsam sequi recusandae illo molestiae? Quasi, temporibus, atque.</p>
+                 <h4>Latest Blog <i class="fa fa-rss"></i></h4>
+                    <ul>
+                        <li>          
+                            <?php
+                            $temp = $wp_query;
+                            $wp_query= null;
+                            $wp_query = new WP_Query();     
+                              $wp_query->query('showposts=1'.'&paged='.$paged.'&category_name=blog');
+                            while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
+                                 <a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail(array(210,210), array ('class' => 'alignleft')); ?></5>                        
+                                 <h5><a title="<?php the_title(); ?>" href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h3>
+                                  <span>by&nbsp;<?php the_author(); ?>&nbsp;on&nbsp;<?php the_time('jS F Y') ?></span> 
+                                   <?php the_excerpt(__('(more…)')); ?> 
+                                 <div class="clear"></div>
+                          <?php endwhile; ?>  
+                            
+                           </li>
+                        </ul>
+
                 </div><!--end of blog -->
             </div>
-            <div class="col-md-12">
+            <div class="">
                 <div class="latest-news">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita velit adipisci, architecto sint illum ut nobis molestiae, laudantium perferendis perspiciatis odio hic reprehenderit nam vero earum magnam eaque tenetur doloremque!</p>
+                 <h4>Latest News <i class="fa fa-newspaper-o"></i></h4>
+                    <ul>
+                        <li>          
+                            <?php
+                            $temp = $wp_query;
+                            $wp_query= null;
+                            $wp_query = new WP_Query();     
+                              $wp_query->query('showposts=1'.'&paged='.$paged.'&category_name=news');
+                            while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
+                                 <a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail(array(210,210), array ('class' => 'alignleft')); ?></5>                        
+                                 <h5><a title="<?php the_title(); ?>" href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h3>
+                                  <span>by&nbsp;<?php the_author(); ?>&nbsp;on&nbsp;<?php the_time('jS F Y') ?></span> 
+                                   <?php the_excerpt(__('(more…)')); ?> 
+                                 <div class="clear"></div>
+                          <?php endwhile; ?>  
+                            
+                           </li>
+                        </ul>  
+
+
                 </div><!--end of latest-news-->
             </div>
         </div>
