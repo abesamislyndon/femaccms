@@ -10,7 +10,8 @@
             <div class="col-md-6">
                 <div class="">
                   <div class="call-us">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis quos pariatur ipsa velit animi alias, nemo ea provident cumque molestias, voluptatum, voluptatibus porro neque eveniet odio ullam voluptas accusantium beatae!</p>
+                  <?php $id =813; $page_data = get_page($id);?>
+                      <p><?php $post = get_page($id); $content = apply_filters('the_content', $post->post_content); echo $content; ?></p>   
                   </div><!--end of lend of call us-->
                 </div>
 
@@ -46,20 +47,20 @@
           <div class="product-latest">
                <?php echo do_shortcode('[featured_products per_page="8" columns="4" orderby="date" order="desc"]');?>
           </div><!--end of product-latest-->
-        </div>
+        </div>  
     </div>
 
   <div class="row no-gutters top" >
-        <div class="col-md-4">
+        <div class="col-md-4 red">
             <div class="contact" id="googlemaps">
-                    <h4>CONTACT US</h4>
-                  <p> Femac Singapore Pte. Ltd</br>
-                      12 Tagore Lane</br>
-                      Singapore 787474</br>
-                      Tel: +65 6454 7277</br>
-                      Fax: +65 6458 7701</br>
-                      Email: info@femac.com.sg</p>
-
+                <h4>CONTACT US</h4>
+                <p>Femac Singapore Pte. Ltd</br>
+                   12 Tagore Lane</br>
+                   Singapore 787474</br>
+                   Tel: +65 6454 7277</br>
+                   Fax: +65 6458 7701</br>
+                   Email: info@femac.com.sg
+                </p>
             </div><!--end of contact-->
         </div>
 
@@ -73,20 +74,19 @@
                             $temp = $wp_query;
                             $wp_query= null;
                             $wp_query = new WP_Query();     
-                              $wp_query->query('showposts=1'.'&paged='.$paged.'&category_name=blog');
+                            $wp_query->query('showposts=1'.'&paged='.$paged.'&category_name=blog');
                             while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
-                                 <a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail(array(210,210), array ('class' => 'alignleft')); ?></5>                        
-                                 <h5><a title="<?php the_title(); ?>" href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h3>
-                                  <span>by&nbsp;<?php the_author(); ?>&nbsp;on&nbsp;<?php the_time('jS F Y') ?></span> 
-                                   <?php the_excerpt(__('(more…)')); ?> 
-                                 <div class="clear"></div>
-                          <?php endwhile; ?>  
-                            
+                            <a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail(array(210,210), array ('class' => 'alignleft')); ?></5>                        
+                            <h5><a title="<?php the_title(); ?>" href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h3>
+                            <span>by&nbsp;<?php the_author(); ?>&nbsp;on&nbsp;<?php the_time('jS F Y') ?></span> 
+                            <?php the_excerpt(__('(more…)')); ?> 
+                            <div class="clear"></div>
+                            <?php endwhile; ?>       
                            </li>
                         </ul>
-
-                </div><!--end of blog -->
-            </div>
+                   </div><!--end of blog -->
+                 </div>
+            
             <div class="">
                 <div class="latest-news">
                  <h4>Latest News <i class="fa fa-newspaper-o"></i></h4>

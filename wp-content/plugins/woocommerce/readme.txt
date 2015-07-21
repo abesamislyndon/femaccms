@@ -764,7 +764,8 @@ Yes you can! Join in on our [GitHub repository](http://github.com/woothemes/wooc
 * Tweak - Use API request URL for mijireh and PayPal callbacks.
 * Tweak - move variation data to tooltip in order items meta box.
 * Tweak - Store variation data for order items added through the admin.
-* Tweak - Billing Address > Billing Details text. We take more than address in this section.
+* Tweak - 
+ > Billing Details text. We take more than address in this section.
 * Tweak - Delete terms transient during recount.
 * Refactor - jshint javascript files.
 * Localisation - add Bangladeshi currency and symbol.

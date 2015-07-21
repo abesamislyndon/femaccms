@@ -9,7 +9,7 @@ Template Name:woocommerce
     <div class="row no-gutters">
   		<div class="col-md-9">
           <div class="woo-custom">
-                <?php woocommerce_content(); ?> 
+               <?php woocommerce_content(); ?>
           </div>
   		</div>
   		
@@ -34,3 +34,4 @@ Template Name:woocommerce
       </div><!-- #product-<?php the_ID(); ?> -->
    </div>
 <?php get_footer(); ?>
+

@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $current_user;
 
-$page_title = ( $load_address === 'billing' ) ? __( 'Billing Address', 'woocommerce' ) : __( 'Shipping Address', 'woocommerce' );
+$page_title = ( $load_address === 'billing' ) ? __( 'Billing Addressss', 'woocommerce' ) : __( 'Shipping Address', 'woocommerce' );
 
 get_currentuserinfo();
 

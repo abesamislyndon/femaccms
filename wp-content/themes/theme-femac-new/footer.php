@@ -14,16 +14,14 @@
 
             <div class="col-md-8">
                <div class="copyright">
-               <p>©2013 Femac Singapore Pte Ltd. All Rights Reserved. Design by Exhibit Media Pte Ltd </p>
+               <p>©2015 Femac Singapore Pte Ltd. All Rights Reserved. Design by Exhibit Media Pte Ltd </p>
                </div>
             </div>
         </div> 
      </div>
    </footer>   
-
     </div><!--end og bg-container-gray-->
   </div><!--end of container 2-->
-
 
  <script>
       $(function(){
@@ -33,7 +31,7 @@
     });
   </script>
 
-  <script src="<?php echo bloginfo('template_url');?>/js/script.js"></script>
-</body>
+ <script src="<?php echo bloginfo('template_url');?>/js/script.js"></script>
+ </body>
  <?php wp_footer(); ?>
 </html>

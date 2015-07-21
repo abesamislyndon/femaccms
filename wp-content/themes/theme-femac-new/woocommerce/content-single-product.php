@@ -39,6 +39,8 @@ if ( ! defined( 'ABSPATH' ) ) {
        <div class = "col-md-4"> 
 	     <div class="summary entry-summary">
 		  <?php do_action( 'woocommerce_single_product_summary' ); ?>
+		  <hr>
+		  <?php echo pdf_attachment_file(1,"download pdf");?>
 	     </div><!-- .summary -->
 	   </div><!-- .summary -->
 	  

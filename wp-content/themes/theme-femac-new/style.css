@@ -5,7 +5,9 @@ button:focus {
 outline: none;
 }
 
-
+a:hover{
+  text-decoration: none !important;
+}
 
 /* =========== background  =================== */
 
@@ -104,9 +106,14 @@ outline: none;
 /* ============== call us ====================== */
 
 .call-us{
-    padding:20px; 
+    padding:10px; 
     border-left:1px solid #ececec; 
     border-bottom:1px solid #ececec;
+}
+.call-us p{
+  text-align: center;
+  font-size:23px;
+  font-weight:bold;   
 }
 
 /* ============== who we are ====================== */
@@ -175,10 +182,43 @@ outline: none;
 
 .page{
   padding:40px; 
-  font-family: 'Conv_gotham-rounded-medium';
   color:#555555; 
 }
-
+.page li{
+  list-style: none;
+}
+.page1{
+  padding:40px; 
+  color:#555555; 
+}
+.page1 img{
+  width:80%;
+  height:auto;
+  text-align: center;
+  margin-left:auto;
+  margin-right:auto; 
+  display:block; 
+}
+.page2{
+  padding:40px; 
+  color:#555555; 
+  text-align: center;
+}
+.page2 img{
+  width:100%;
+  height:auto;
+  text-align: center;
+  margin-left:auto;
+  margin-right:auto; 
+  display:block; 
+}
+.error-404{
+  position:relative; 
+  text-align: center;
+  font-size:30px;
+  color:#999; 
+  margin-top:40px; 
+}
 /* ============== brand arrow ====================== */
 
 .brand-arrow{
@@ -718,13 +758,26 @@ outline: none;
   background:url(img/page-bg.jpg) no-repeat;
   font-family: 'Conv_gotham-rounded-medium';
   text-shadow: 2px 2px 5px rgba(150, 150, 150, 1);
-  height:150px; 
+  height:190px; 
+}
+.page-contact{
+  color:#000;
+  font-size:22px; 
+  padding:50px 60px 60px 60px; 
+  margin-top:0px;
+  text-transform: uppercase; 
+  text-align:left;
+  background:url(img/page-contact.jpg) no-repeat;
+  font-family: 'Conv_gotham-rounded-medium';
+  text-shadow: 2px 2px 5px rgba(150, 150, 150, 1);
+  height:190px; 
 }
 .term-description{
   padding:10px 20px; 
   text-align: center;
   margin-top: 30px;
 }
+
 
 /* ============================================= woocommerce override product style ============================ */
 

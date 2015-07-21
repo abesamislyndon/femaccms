@@ -10,9 +10,9 @@ Template Name:PAGE-PRODUCT
     <div class="row no-gutters">
         <div class="col-md-9">
             <h4 class = "page-title1"><i class="fa fa-cubes"></i>&nbsp;&nbsp;&nbsp;Products</h4>
-          <div class="page">
+          <div class="page1">
              <?php $id =8; $page_data = get_page($id);?>
-                    <p><?php $post = get_page($id); $content = apply_filters('the_content', $post->post_content); echo $content; ?></p>
+             <p class = "product-page"><?php $post = get_page($id); $content = apply_filters('the_content', $post->post_content); echo $content; ?></p>
           </div>
         </div>
         
@@ -23,11 +23,4 @@ Template Name:PAGE-PRODUCT
         </div>
         </div>
   </div>
-
-
-
-
-
-
-    
 <?php get_footer(); ?>

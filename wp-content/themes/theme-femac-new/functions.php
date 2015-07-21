@@ -84,44 +84,44 @@
     add_filter('loop_shop_per_page', create_function('$cols', 'return 200;'));
 
 
-if (function_exists('st_makeEntries')) :
-add_shortcode('sharethis', 'st_makeEntries');
-endif;
+    if (function_exists('st_makeEntries')) :
+    add_shortcode('sharethis', 'st_makeEntries');
+    endif;
 
-function woocommerce_output_related_products() {
-woocommerce_related_products(8,4); // Display 3 products in rows of 3
-}
+    function woocommerce_output_related_products() {
+    woocommerce_related_products(8,4); // Display 3 products in rows of 3
+    }
 
-add_filter( 'woocommerce_product_single_add_to_cart_text', 'woo_custom_cart_button_text' );    // 2.1 +
-function woo_custom_cart_button_text() {
- 
-        return __( '<i class="fa fa-cart-arrow-down"></i>&nbsp;&nbsp;add to Quote', 'woocommerce' );
- 
-}
+    add_filter( 'woocommerce_product_single_add_to_cart_text', 'woo_custom_cart_button_text' );    // 2.1 +
+    function woo_custom_cart_button_text() {
+     
+            return __( '<i class="fa fa-cart-arrow-down"></i>&nbsp;&nbsp;add to Quote', 'woocommerce' );
+     
+    }
 
-add_filter( 'woocommerce_product_add_to_cart_text', 'woo_custom_cart_button_text1' );      // 2.1 +
-function woo_custom_cart_button_text1() {
- 
-        return __( 'Add to Quote', 'woocommerce' );
- 
-}
+    add_filter( 'woocommerce_product_add_to_cart_text', 'woo_custom_cart_button_text1' );      // 2.1 +
+    function woo_custom_cart_button_text1() {
+     
+            return __( 'Add to Quote', 'woocommerce' );
+     
+    }
+
+    remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_login_form', 10 );
+
+    // custom admin login logo
+    function custom_login_logo() {
+      echo '<style type="text/css">
+       h1 a { background-image: url('.get_bloginfo('template_directory').'/images/logo-admin.png) !important; }
+      </style>';
+    }
+    add_action('login_head', 'custom_login_logo');
 
 
+    add_action( 'wp_enqueue_scripts', 'enqueue_font_awesome' );
+    function enqueue_font_awesome() {
 
-// custom admin login logo
-function custom_login_logo() {
-  echo '<style type="text/css">
-   h1 a { background-image: url('.get_bloginfo('template_directory').'/images/logo-admin.png) !important; }
-  </style>';
-}
-add_action('login_head', 'custom_login_logo');
+      wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' );
 
-
-add_action( 'wp_enqueue_scripts', 'enqueue_font_awesome' );
-function enqueue_font_awesome() {
-
-  wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' );
-
-}
+    }
 
 ?>

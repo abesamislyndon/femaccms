@@ -492,20 +492,20 @@ function addStyle()
 			."<style type=\"text/css\">\n"
 			.".cuf_input {display:none !important; visibility:hidden !important;}\n"
 			."#contactsubmit:hover, #contactsubmit:focus {
-text-decoration:none;
-background-image: -ms-linear-gradient(bottom, #003399 0%, #00A3EF 100%);
-background-image: -moz-linear-gradient(bottom, #003399 0%, #00A3EF 100%);
-background-image: -o-linear-gradient(bottom, #003399 0%, #00A3EF 100%);
-background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #003399), color-stop(1, #00A3EF));
-background-image: -webkit-linear-gradient(bottom, #003399 0%, #00A3EF 100%);
-background-image: linear-gradient(to top, #003399 0%, #00A3EF 100%);
--webkit-transition:1s;
--moz-transition:1s;
--o-transition:1s;
-transition:1s;
-border: none;
-border-radius:4px; 
-  border:1px solid #000;
+	text-decoration:none;
+	background-image: -ms-linear-gradient(bottom, #003399 0%, #00A3EF 100%);
+	background-image: -moz-linear-gradient(bottom, #003399 0%, #00A3EF 100%);
+	background-image: -o-linear-gradient(bottom, #003399 0%, #00A3EF 100%);
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #003399), color-stop(1, #00A3EF));
+	background-image: -webkit-linear-gradient(bottom, #003399 0%, #00A3EF 100%);
+	background-image: linear-gradient(to top, #003399 0%, #00A3EF 100%);
+	-webkit-transition:1s;
+	-moz-transition:1s;
+	-o-transition:1s;
+	transition:1s;
+	border: none;
+	border-radius:4px; 
+    border:1px solid #000;
 }
 #contactsubmit:active {background: #849F00}
 #contactsubmit {
@@ -539,7 +539,7 @@ border-radius:4px;
  }
 #tinyform {
 clear: both;
-	width:500px;
+	width:100%;
 	/*margin-top:30px;*/
 	padding:20px;
 	-webkit-border-radius:5px;
@@ -563,6 +563,9 @@ clear: both;
 	outline:none;
 	margin-bottom:15px;
 }
+
+
+
 @media only screen and (max-width : 320px) { 
 #tinyform {
 clear: both;

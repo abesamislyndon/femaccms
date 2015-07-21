@@ -190,7 +190,6 @@ $order = wc_get_order( $order_id );
 <?php endif; ?>
 
 		<header class="title">
-			<h3><?php _e( 'Billing Address', 'woocommerce' ); ?></h3>
 		</header>
 		<address>
 			<?php

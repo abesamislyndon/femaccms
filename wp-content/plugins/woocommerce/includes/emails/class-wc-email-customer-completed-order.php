@@ -28,7 +28,7 @@ class WC_Email_Customer_Completed_Order extends WC_Email {
 		$this->title 			= __( 'Completed order', 'woocommerce' );
 		$this->description		= __( 'Order complete emails are sent to customers when their orders are marked completed and usually indicate that their orders have been shipped.', 'woocommerce' );
 
-		$this->heading 			= __( 'Your order is complete', 'woocommerce' );
+		$this->heading 			= __( 'Your quote is complete', 'woocommerce' );
 		$this->subject      	= __( 'Your {site_title} order from {order_date} is complete', 'woocommerce' );
 
 		$this->template_html 	= 'emails/customer-completed-order.php';
@@ -38,7 +38,7 @@ class WC_Email_Customer_Completed_Order extends WC_Email {
 		add_action( 'woocommerce_order_status_completed_notification', array( $this, 'trigger' ) );
 
 		// Other settings
-		$this->heading_downloadable = $this->get_option( 'heading_downloadable', __( 'Your order is complete - download your files', 'woocommerce' ) );
+		$this->heading_downloadable = $this->get_option( 'heading_downloadable', __( 'Your Quote is complete - download your files', 'woocommerce' ) );
 		$this->subject_downloadable = $this->get_option( 'subject_downloadable', __( 'Your {site_title} order from {order_date} is complete - download your files', 'woocommerce' ) );
 
 		// Call parent constuctor
