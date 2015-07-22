@@ -40,9 +40,11 @@ a:hover{
   border-bottom: 1px solid #ececec;
 }
 
-.banner-photo img{
-  width:100%;
-  height: auto;
+.banner-photo {
+  z-index:-1; 
+}
+.title{
+  display: none !important;
 }
 
 /* ============== brand arrow ====================== */
@@ -120,11 +122,23 @@ a:hover{
 
 .who-we{
     border-left:1px solid #ececec; 
-    padding:29px; 
+    padding:29px;
+}
+
+.mini-footer{
+  background: url(img/map.jpg) no-repeat;
+  width:100%; 
+  height:auto;
+  padding:80px; 
 }
 
 .contact{
   padding:20px; 
+}
+.contact h4{
+  font-size: 19px;
+  font-weight: bold;
+  color:#302ab0;
 }
 
 .latest-blog{
@@ -169,10 +183,9 @@ a:hover{
 }
 
 .contact{
-  padding:90px; 
-  margin-top:90px; 
+  padding:107px; 
+  margin-top:50px; 
 }
-
 
 .top{
   border-top: 1px solid #ededed;
@@ -919,6 +932,13 @@ a:hover{
     font-size:40px; 
   }
 
+  .mini-footer{
+   height:auto !important;
+   background: url(img/map.jpg) no-repeat;
+   width:100%; 
+   bottom:-50px;
+}
+
   #nav ul li {
     float: none;
 
@@ -951,7 +971,7 @@ a:hover{
 
     }
 
-  .bg-container1{
+   .bg-container1{
       height:120px;
       margin-top:-20px;  
       background: #fff !important;
@@ -1003,6 +1023,11 @@ a:hover{
     margin-left:105px;
     top:-15px; 
 }
+  .mini-footer{
+   height:auto !important;
+   background: url(img/map.jpg) no-repeat;
+}
+
 
 .arrow_box:after {
     left:97%;

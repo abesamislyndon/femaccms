@@ -889,7 +889,6 @@ function wp_logo_slider_style() {
                 width: 100% !important;
             }
             #logo-slider {
-                background:red !important;
                 height: <?php echo $wp_logo_slider_settings['slider_height']?>px;
                 list-style: none outside none;
                 margin: 0;
