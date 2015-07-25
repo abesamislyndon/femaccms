@@ -124,7 +124,7 @@
 
     }
 
-
+    $_SERVER['HTTPS'] = false;
 
 
 ?>
